@@ -1,0 +1,74 @@
+
+// @import "mixin/media";
+
+// @import "util/grid";
+
+// @import "lib/normalize";
+
+// @import "modifier/margin";
+
+// @import 'base/base';
+// @import 'base/fonts';
+
+// @import 'module/cat';
+
+// $base-font: 'Cascadia Code', Consolas, 'Courier New', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,400;0,700;1,200&display=swap');
+
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "color";
+
+$base-font: 'Sarabun', sans-serif;
+$code-font: 'Cascadia Code', Consolas, 'Courier New', monospace;
+
+body {
+  font-family: $base-font;
+}
+.code-font {
+  font-family: $code-font;
+}
+#print p { margin: 4px 0;}
+.text-barcode {
+  font-family: $base-font;
+}
+.fs-7 {
+  font-size: .88rem;
+}
+.fs-8 {
+  font-size: 13px;
+}
+
+input {
+  font-family: $base-font;
+  font-size: 2em !important;
+  border-radius: 40px !important;
+  text-align: center;
+}
+
+label {
+  font-family: $base-font;
+  padding-left: 30px;
+}
+
+@media screen {
+  body {
+    background-color: #212529;
+  }
+}
+
+@media print {
+
+  html,
+  body {
+    width: 8.5in !important;
+    height: 5.5in !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  .print-page-break {
+    page-break-after: always;
+  }
+}

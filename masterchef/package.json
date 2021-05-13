@@ -1,0 +1,19 @@
+{
+  "name": "patcard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+      "serve": "webpack serve --config ./webpack/config.dev.babel.js --mode development ",
+      "start": "node ./webpack/server.js",
+      "start-yarn": "node ./webpack/server.js --yarn",
+      "build": "webpack --config ./webpack/config.prod.babel.js --mode production --env.production",
+      "eslint": "eslint src/**/*.js",
+      "eslint-fix": "eslint src/**/*.js --fix"
+  },
+  "author": "Thanikul Sriuthis <moremeng@dv4.biz>",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

@@ -1,0 +1,32 @@
+<div class="container pt-5 mb-5 d-print-none">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="card-body">
+          <div class="text-center m-auto">
+            <h4 class="text-uppercase text-center code-font">Patient Cards <span class="blue-grey-text text-darken-2">1.0.1</span> </h4>
+          </div>
+          <!-- <form action="#" method="post"> -->
+
+            <div class="mb-3">
+              <!-- <label for="lot">ใส่เลข HN</label> -->
+              <input id="hn" type="text" name="hn" placeholder="HN" class="form-control" required="" value="" autocomplete="off" onfocus="this.value=''">
+            </div>
+
+            <div class="mb-2 text-center">
+              <button data-print="normal" class="printCard btn blue lighten-3 btn-lg rounded-pill px-4 w-50" type="button"> พิมพ์บัตร + วันที่ </button>
+            </div>
+
+            <div class="mb-2 text-center">
+              <button data-print="blank" class="printCard btn blue-grey lighten-3 btn-lg rounded-pill px-4 w-50" type="button"> พิมพ์บัตร เปล่า </button>
+            </div>
+
+            <div class="mb-2 text-center">
+              <button data-print="covid" class="printCard btn btn-lg red text-white rounded-pill px-4 w-50" type="button"> ฉีดวัคซีน COVID-19 </button>
+            </div>
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
