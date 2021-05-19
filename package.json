@@ -5,10 +5,8 @@
   "main": "index.js",
   "author": "Thanikul Sriuthis <moremeng@dv4.biz>",
   "license": "ICS",
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "private": true,
   "workspaces": {
     "packages": [
