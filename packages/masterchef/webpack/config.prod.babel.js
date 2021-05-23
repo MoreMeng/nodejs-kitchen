@@ -43,7 +43,11 @@ const getPlugins = () => {
         plugins.push(
           new HtmlWebpackPlugin({
             template: `./src/html/${filename}`,
-            filename: `./${filename}`
+            filename: `./${filename}`,
+            minify: {
+              collapseWhitespace: true,
+              removeComments: true
+            }
           }),
         );
       }
