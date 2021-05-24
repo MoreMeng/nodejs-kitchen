@@ -1,9 +1,6 @@
 packages/*
 !/packages/masterchef/
 
-README.md
-demo.txt
-
 # Logs
 logs
 *.log
