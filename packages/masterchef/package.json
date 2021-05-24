@@ -17,7 +17,7 @@
   "dependencies": {
   },
   "devDependencies": {
-    "bootstrap": "^5.0.0",
+    "bootstrap": "^5.0.1",
     "@babel/core": "^7.14.2",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/plugin-proposal-decorators": "^7.14.2",
