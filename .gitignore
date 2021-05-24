@@ -1,5 +1,4 @@
-packages/*
-!/packages/masterchef/**
+packages/
 
 # Logs
 logs
