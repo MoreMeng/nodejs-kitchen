@@ -51,6 +51,6 @@
 
 ## Introduct
 
-lerna + workplace
+lerna + yarn workplace
 
 ref: https://icegotcha.medium.com/introduction-to-lerna-tool-for-monorepos-7a3d6fe4d65c

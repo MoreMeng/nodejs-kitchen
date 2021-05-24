@@ -12,7 +12,7 @@
   },
   "author": "Thanikul Sriuthis <moremeng@dv4.biz>",
   "license": "MIT",
-  "description": "* Don't start `yarn install` + `yarn start` (`npm install` + `npm start`) on this!\r * Don't worry about webpack config, just code\r * Custom HTML Modules plugin\r ```html\r         <!DOCTYPE html>\r         <html>\r         <head>\r             <title>Example HTML</title>\r         </head>\r         <body>\r             <include>_form.html</include>\r             <include>_print.html</include>\r         </body>\r         </html>",
+  "description": "Welcome to Kitchen Stadium",
   "keywords": [],
   "dependencies": {
   },
