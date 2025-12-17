@@ -38,6 +38,9 @@ jobs:
             ${{ runner.os }}-yarn-
       
       - name: Install dependencies
+        # Note: node-sass has known compatibility issues with Node.js 20
+        # Using --ignore-optional to skip optional dependencies
+        # continue-on-error allows the build to proceed if optional deps fail
         run: yarn install --ignore-optional
         continue-on-error: true
       
@@ -50,12 +53,19 @@ jobs:
           test -d node_modules/lerna && echo "✅ Lerna installed"
       
       - name: Bootstrap Lerna packages
+        # Using --ignore-scripts to avoid build failures from optional deps
+        # The || true allows bootstrap to continue if some packages have issues
+        # This is acceptable since we verify critical deps in the next steps
         run: npx lerna bootstrap --ignore-scripts || true
       
       - name: Run ESLint on masterchef
         run: |
           cd packages/masterchef
           echo "Running ESLint to verify it can execute..."
+          # ESLint exit codes:
+          # 0 = no errors found, 1 = linting errors found (tool executed successfully)
+          # 2+ = ESLint failed to execute (configuration or runtime error)
+          # We accept 0 or 1 as valid since existing codebase has linting errors
           yarn eslint || ESLINT_EXIT=$?
           if [ "${ESLINT_EXIT:-0}" -eq 0 ] || [ "${ESLINT_EXIT:-0}" -eq 1 ]; then
             echo "✅ ESLint executed successfully"
