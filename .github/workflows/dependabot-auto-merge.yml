@@ -12,6 +12,7 @@ jobs:
   dependabot-auto-merge:
     runs-on: ubuntu-latest
     # Only run for Dependabot PRs
+    # Note: auto-merge will wait for CI checks to pass before merging
     if: github.actor == 'dependabot[bot]'
 
     steps:
