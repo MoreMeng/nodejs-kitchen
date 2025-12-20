@@ -34,7 +34,7 @@
     "cssnano": "^7.1.2",
     "eslint": "^7.26.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-loader": "^2.1.1",
+    "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.22.1",
     "express": "^4.17.1",
     "extract-loader": "^5.1.0",
