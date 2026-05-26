@@ -46,7 +46,7 @@
     "lerna": "^9.0.3",
     "node-sass": "^9.0.0",
     "postcss-loader": "^8.2.0",
-    "sass-loader": "^16.0.6",
+    "sass-loader": "^17.0.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.37.0",
     "webpack-cli": "^7.0.1",
