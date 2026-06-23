@@ -24,7 +24,7 @@
     "@babel/plugin-proposal-export-default-from": "^8.0.1",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.14.2",
-    "@babel/register": "^7.13.16",
+    "@babel/register": "^8.0.1",
     "autoprefixer": "^10.2.5",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^10.0.0",
