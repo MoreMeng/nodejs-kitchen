@@ -5,13 +5,15 @@
   "main": "index.js",
   "author": "Thanikul Sriuthis <moremeng@dv4.biz>",
   "license": "ICS",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "node-cron": "^3.0.3"
+  },
   "private": true,
   "workspaces": {
     "packages": [
       "packages/*",
       "services/*"
     ]
-  }
+  },
+  "packageManager": "yarn@4.12.0"
 }
