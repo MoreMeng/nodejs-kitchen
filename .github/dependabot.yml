@@ -1,0 +1,145 @@
+# Configuration for Dependabot automated dependency updates
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  # Root directory - main package.json
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "02:00"
+      timezone: "Asia/Bangkok"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "automated"
+    groups:
+      # Group all non-major development dependencies together
+      development-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+
+  # Packages workspace - packages/*
+  - package-ecosystem: "npm"
+    directory: "/packages/masterchef"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "02:00"
+      timezone: "Asia/Bangkok"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "automated"
+      - "workspace:packages"
+    groups:
+      # Group webpack-related packages
+      webpack-packages:
+        patterns:
+          - "webpack*"
+          - "html-webpack-plugin"
+          - "*-loader"
+        update-types:
+          - "minor"
+          - "patch"
+      # Group babel-related packages
+      babel-packages:
+        patterns:
+          - "@babel/*"
+        update-types:
+          - "minor"
+          - "patch"
+      # Group eslint-related packages
+      eslint-packages:
+        patterns:
+          - "eslint*"
+        update-types:
+          - "minor"
+          - "patch"
+      # Group other development dependencies
+      development-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/covid19vaccine"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "02:00"
+      timezone: "Asia/Bangkok"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "automated"
+      - "workspace:packages"
+    groups:
+      development-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/patcard"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "02:00"
+      timezone: "Asia/Bangkok"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "automated"
+      - "workspace:packages"
+    groups:
+      development-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/vaccine-barcode"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "02:00"
+      timezone: "Asia/Bangkok"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "automated"
+      - "workspace:packages"
+    groups:
+      development-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
