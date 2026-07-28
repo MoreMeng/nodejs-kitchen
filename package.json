@@ -6,7 +6,7 @@
   "author": "Thanikul Sriuthis <moremeng@dv4.biz>",
   "license": "ICS",
   "dependencies": {
-    "node-cron": "^3.0.3"
+    "node-cron": "^4.6.0"
   },
   "private": true,
   "workspaces": {
